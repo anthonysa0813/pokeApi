@@ -1,0 +1,65 @@
+@use "./scss/base/base";
+@use "./scss/base/reset";
+@use "./scss/abstracts/variables";
+@use "./scss/components/header";
+@use "./scss/components/pokemonList.scss";
+@use "./scss/components/menu.scss";
+@use "./scss/components/pokemonDetails.scss";
+@use "./scss/base/buttons";
+@use "./scss/components/menuBurguer.scss";
+
+html,
+body {
+  font-family: var(--font-poppins);
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.debug {
+  border: 3px solid brown;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr 100px;
+  height: 100vh;
+}
+
+header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+.pokemonList {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding-block: 2rem;
+}
+
+footer {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  // filter: blur(1px);
+  color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-block: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
