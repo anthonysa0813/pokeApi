@@ -7,9 +7,7 @@ const PokemonCard = ({ pokemon }) => {
     <Link to={`/pokemon/${pokemon.name}`} className="pokemonCard  ">
       <div className="pokemonImage">
         <img
-          src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${
-            pokemon.id == undefined ? 1 : pokemon.id
-          }.svg`}
+          src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
           alt=""
         />
       </div>
